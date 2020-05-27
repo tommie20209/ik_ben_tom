@@ -24,7 +24,7 @@ fs.readdir("./commands/", (err, files) => {
     })
 });
 
-client.login(botConfig.token);
+client.login(process.env.BOT_TOKEN);
 client.on("guildMemberAdd", newMember => {
     var role = newMember.guild.roles.cache.find(ro => ro.name == "welkom");
     var welkom = newMember.guild.channels.cache.find(ch => ch.name == "regels");
