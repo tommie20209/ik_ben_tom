@@ -38,12 +38,7 @@ module.exports.run = async (bot, message, args) => {
                         SEND_MESSAGES: false,
                         VIEW_CHANNEL: false
                     });
-
-                    setedparent.updateOverwrite(message.guild.roles.cache.find(r => r.name == "everyone"), {
-                        SEND_MESSAGES: false,
-                        VIEW_CHANNEL: false
-                    });
-
+                    
                     setedparent.updateOverwrite(message.author.id, {
                         CREATE_INSTANT_INVITE: false,
                         READ_MESSAGES: true,
