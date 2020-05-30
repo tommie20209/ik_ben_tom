@@ -48,6 +48,8 @@ module.exports.run = async (bot, message, args) => {
                         SEND_MESSAGES: true,
                         VIEW_CHANNEL: true,
                         ATTACH_FILES: true,
+                        VIEW_CHANNEL:true,
+                        READ_MESSAGES_HISTORY: true,
                         CREATE_INSTANT_INVITE: false,
                         ADD_REACTIONS: true
                     });
