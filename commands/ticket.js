@@ -1,7 +1,8 @@
 const discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
-    const cannelID = "700803609029247017";
+    const categoryID
+ = "700803609029247017";
 
     var userName = message.author.username;
     var userDiscriminatoor = message.author.discriminator;
@@ -31,7 +32,7 @@ module.exports.run = async (bot, message, args) => {
 
     message.guild.channels.create(username.tolowerCase() + "-" + userDiscriminatoor, { type: "text" }).then(
         (createdchannel) => {
-            createdchannel.setParent(cannelID).then(
+            createdchannel.setParent(categoryID).then(
                 (setedparent) => {
 
                     setedparent.updateOverwrite(message.guild.roles.cache.find(r => r.name == `@welkom`), {
