@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
 
 
     message.guild.channels.cache.forEach(channel => {
-        if (channel.name == userName.tolowerCase() + "-" + userDiscriminatoor) {
+        if (channel.name == userName.toLowerCase() + "-" + userDiscriminatoor) {
             ticketBestaat = true;
 
             message.reply("je hebt al een ticket gemaakt");
