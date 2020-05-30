@@ -34,12 +34,12 @@ module.exports.run = async (bot, message, args) => {
             createdchannel.setParent(categoryID).then(
                 (setedparent) => {
 
-                    setedparent.updateOverwrite(message.guild.roles.cache.find(r => r.name == `@welkom`), {
+                    setedparent.updateOverwrite(message.guild.roles.cache.find(r => r.name == "welkom"), {
                         SEND_MESSAGES: false,
                         VIEW_CHANNEL: false
                     });
 
-                    setedparent.updateOverwrite(message.guild.roles.cache.find(r => r.name == `@everyone`), {
+                    setedparent.updateOverwrite(message.guild.roles.cache.find(r => r.name == "everyone"), {
                         SEND_MESSAGES: false,
                         VIEW_CHANNEL: false
                     });
