@@ -29,7 +29,7 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(embed);
 
 
-    message.guild.channels.create(userName .toLowerCase() + "-" + userDiscriminatoor, { type: "text" }).then(
+    message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminatoor, { type: "text" }).then(
         (createdchannel) => {
             createdchannel.setParent(categoryID).then(
                 (setedparent) => {
@@ -45,18 +45,17 @@ module.exports.run = async (bot, message, args) => {
                     });
 
                     setedparent.updateOverwrite(message.author.id, {
-                        SEND_MESSAGES: true,
-                        VIEW_CHANNEL: true,
-                        ATTACH_FILES: true,
-                        VIEW_CHANNEL:true,
-                        READ_MESSAGES_HISTORY: true,
                         CREATE_INSTANT_INVITE: false,
+                        READ_MESSAGES: true,
+                        SEND_MESSAGES: true,
+                        ATTACH_FILES: true,
+                        CONNECT: true,
                         ADD_REACTIONS: true
                     });
 
                     var embedtt = new discord.MessageEmbed()
                         .setTitle(`hoi ${message.author.username}`);
-                   setedparent.send(embedtt);
+                    setedparent.send(embedtt);
                 }
             ).catch(err => {
                 message.channel.send("er is misgegaan");
