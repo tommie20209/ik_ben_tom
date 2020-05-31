@@ -1,3 +1,5 @@
+const botConfig = require("./botconfig.json");
+const fs = require("fs");
 module.exports.run = async(bot, message, args) =>{
   fs.readdir("./commands/", (err, files) => {
 
