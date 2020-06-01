@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 module.exports.run = async(bot, message, args) =>{
 
-    if (!message.guild.me.hasPermission("KICK_MEMBERS")) return;
+    if (!message.guild.me.hasPermission("BAN_MEMBERS")) return;
 
     var helptext = "**_admin commands_** \n !ban - om iemand te bannen \n !kick - kick iemand \n !tempmute - mute een speler voor een bebaalde tijd";
 
