@@ -63,7 +63,7 @@ client.on("message", async message => {
         if (msg.includes(swearwords["vloekwoorden"][i])) {
             message.delete();
 
-            return (message.reply("gelieve niet te schelden/vloeken"));
+            return (await (message.reply("gelieve niet te schelden/vloeken"))).then({timeout: [5000]});
         }
     }
 
