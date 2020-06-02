@@ -43,7 +43,7 @@ client.on("guildMemberRemove", doeimember => {
 client.on("ready", async () => {
 
     console.log(`${client.user.username} is online.`);
-    client.user.setActivity("fortnite | **!help**", { type: "PLAYING" });
+    client.user.setActivity("fortnite | !help", { type: "PLAYING" });
 
 });
 
