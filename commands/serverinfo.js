@@ -13,5 +13,7 @@ module.exports.run = async(bot, message, args) =>{
   return message.channel.send(serverEmbed);
   }
   module.exports.help ={
-    name: "sinfo"
+    name: "sinfo",
+    description: "geeft serverinfo",
+    category: "infomatie"
   }

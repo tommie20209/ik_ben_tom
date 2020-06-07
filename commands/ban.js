@@ -88,5 +88,7 @@ return message.awaitReactions(filter, { max: 1, time: time }).then(collected => 
 }
 
 module.exports.help ={
-  name: "ban"
+  name: "ban",
+  description: "ban een speler",
+  category: "_ADMIN COMMANDS_"
 }

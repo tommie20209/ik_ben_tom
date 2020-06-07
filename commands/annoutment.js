@@ -48,5 +48,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "annoutment"
+    name: "annoutment",
+    description: "geef een bericht wat er gaat geberen in kleur!",
+    category: "algemeen"
 }

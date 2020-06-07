@@ -4,7 +4,7 @@ const warns = JSON.parse(fs.readFileSync("./data/warnigs.json", "utf8"));
 
 module.exports.run = async(bot, message, args) =>{
 
-   if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("sorry jij kan dit niet");
+   if (!message.member.me.hasPermission("KICK_MEMBERS")) return message.reply("sorry jij kan dit niet");
 
    if (!message.guild.me.hasPermission("KICK_MEMBERS")) return message.reply("Geen perms");
 
@@ -27,7 +27,7 @@ module.exports.run = async(bot, message, args) =>{
    
    warns[warnUser.id].warns++;
 
-   fs.writeFile("./warings.json",  JSON.stringify(warns), (err) =>{
+   fs.writeFile("../data/warings.json",  JSON.stringify(warns), (err) =>{
         if (err) console.log(err);
    });
 
@@ -49,5 +49,7 @@ module.exports.run = async(bot, message, args) =>{
 }
 
 module.exports.help ={
-  name: "warn"
+  name: "warn",
+  description: "waarschuw iemand",
+  category: "algemeen"
 }

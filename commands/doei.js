@@ -5,5 +5,7 @@ module.exports.run = async(bot, message, args) =>{
   }
   
   module.exports.help ={
-    name: "doei"
+    name: "doei",
+    description: "geeft doei!",
+    category: "algemeen"
   }

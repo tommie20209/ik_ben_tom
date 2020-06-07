@@ -34,5 +34,7 @@ if (Number.isInteger(parseInt(args[0]))) {
   }
   
   module.exports.help ={
-    name: "clear"
+    name: "clear",
+    description: "verwijder berichten",
+    category: "algemeen"
   }
