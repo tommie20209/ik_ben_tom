@@ -26,7 +26,7 @@ module.exports.run = async(bot, message, args) =>{
       description: command.help.description,
       category: command.help.category
     }
-
+ 
     commandlist.push(constructor)
      
    });
