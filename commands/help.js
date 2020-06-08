@@ -19,7 +19,8 @@ module.exports.run = async(bot, message, args) =>{
    var commandlist = [];
    var prefix = botConfig.prefix;
 
-   client.commands.forEach(command => {
+   console.log(client.commands)
+   .forEach(command => {
 
     var constructor = {
       name: command.help.name,
