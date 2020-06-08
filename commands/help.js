@@ -34,8 +34,8 @@ module.exports.run = async(bot, message, args) =>{
 
    var response = "**toms bot**\n\n";
    var general = "**algemeen**\n";
-   var infomatie = "**_infomatie_**\n";
-   var admin = "**_ADMIN COMMANds_**\n";
+   var infomatie = "\n**infomatie**\n";
+  //  var admin = "**\n_ADMIN COMMANds_**\n";
 
    for (let i = 0; i < commandlist.length; i++) {
      const command = commandlist[i];
@@ -49,9 +49,7 @@ module.exports.run = async(bot, message, args) =>{
 
       infomatie +=`${prefix}${command["name"]} - ${command["description"]}\n`
 
-     }else(command["category"] == "_ADMIN COMMANds_")(
-       admin +=`${prefix}${command["name"]} - ${command["description"]}\n`
-     )
+     }
    response += general;
    response += infomatie;
    response += admin
