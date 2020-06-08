@@ -42,17 +42,17 @@ module.exports.run = async(bot, message, args) =>{
      
      if(command["category"] == "algemeen"){
 
-      general +=`${prefix}${command["name"]} - ${command["description"]}\n`
+      general +=`${prefix}${command["name"]} - ${command["description"]}\n`;
 
 
      }else if(command["category"] == "infomatie"){
 
-      infomatie +=`${prefix}${command["name"]} - ${command["description"]}\n`
+      infomatie +=`${prefix}${command["name"]} - ${command["description"]}\n`;
 
      }
    response += general;
    response += infomatie;
-   response += admin
+  //  response += admin
 
    message.author.send(response).then(() => {
      message.channel.send("alle commands staan in je prive bericht :mailbox_with_mail:");
