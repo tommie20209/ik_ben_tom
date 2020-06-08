@@ -1,6 +1,5 @@
-const Discord = require("discord.js");
-const client = new Discord.Client();
-client.commands = new Discord.Collection();
+const discord = require("discord.js");
+const client = new discord.Client();
 const botConfig = require("../botconfig.json");
 module.exports.run = async(bot, message, args) =>{
   
@@ -20,8 +19,7 @@ module.exports.run = async(bot, message, args) =>{
    var commandlist = [];
    var prefix = botConfig.prefix;
 
-   console.log(client.commands)
-   .forEach(command => {
+   client.commands.forEach(command => {
 
     var constructor = {
       name: command.help.name,
@@ -63,7 +61,6 @@ module.exports.run = async(bot, message, args) =>{
    });
 }
 }
-
 
 
 module.exports.help ={
