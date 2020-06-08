@@ -1,25 +1,12 @@
 const discord = require("discord.js");
 const client = new discord.Client();
 const botConfig = require("../botconfig.json");
-module.exports.run = async(bot, message, args) =>{
-  
-//     try{
-        
-//     var textt = "**toms bot** \n\n **_commands_** \n !hallo - geeft hallo terug. \n !doei - geeft doei terug. \n !info - Geeft info \n !serverinfo - geef server info \n !drops - geeft een random drop aan voor fn \n !ticket - maak een ticket. ";
-
-//     message.author.send(textt);
-
-//     message.reply("alle command staan in je prive berichten📫👍.");  
-
-
-//     }catch(error){
-//         message.reply("Er is iets misgeaan");
-//     
+module.exports.run = async(bot, message, args) =>{    
 
    var commandlist = [];
    var prefix = botConfig.prefix;
 
-   bot.commands.forEach(command => {
+   client.commands.forEach(command => {
 
     var constructor = {
       name: command.help.name,
@@ -35,24 +22,26 @@ module.exports.run = async(bot, message, args) =>{
    var response = "**toms bot**\n\n";
    var general = "**algemeen**\n";
    var infomatie = "\n**infomatie**\n";
-  //  var admin = "**\n_ADMIN COMMANds_**\n";
+   var admin = "**\n_ADMIN COMMANds_**\n";
 
    for (let i = 0; i < commandlist.length; i++) {
      const command = commandlist[i];
      
      if(command["category"] == "algemeen"){
 
-      general +=`${prefix}${command["name"]} - ${command["description"]}\n`;
+      general +=`${prefix}${command["name"]} - ${command["description"]}\n`
 
 
      }else if(command["category"] == "infomatie"){
 
-      infomatie +=`${prefix}${command["name"]} - ${command["description"]}\n`;
+      infomatie +=`${prefix}${command["name"]} - ${command["description"]}\n`
 
-     }
+     }else(command["category"] == "_ADMIN COMMANds_")(
+       admin +=`${prefix}${command["name"]} - ${command["description"]}\n`
+     )
    response += general;
    response += infomatie;
-  //  response += admin
+   response += admin
 
    message.author.send(response).then(() => {
     return message.channel.send("alle commands staan in je prive bericht :mailbox_with_mail:");
