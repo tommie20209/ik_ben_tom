@@ -29,7 +29,7 @@ client.on("guildMemberAdd", newMember => {
     var role = newMember.guild.roles.cache.find(ro => ro.name == "welkom");
     var welkom = newMember.guild.channels.cache.find(ch => ch.name == "regels");
     var channel = newMember.guild.channels.cache.find(ch => ch.name == "『👋🏻』welkom");
-    var joinembed = discord.MessageEmbed()
+    var joinembed = new discord.MessageEmbed()
     .setcolor("GREEN")
     .setThumbnail(`${newMember}`, newMember.name.displayURL);
     channel.send(joinembed);
