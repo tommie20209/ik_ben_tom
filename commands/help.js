@@ -35,7 +35,7 @@ module.exports.run = async(bot, message, args) =>{
    var response = "**toms bot**\n\n";
    var general = "**algemeen**\n";
    var infomatie = "**_infomatie_**\n";
-  //  var admin = "**_ADMIN COMMANds_**\n";
+
 
    for (let i = 0; i < commandlist.length; i++) {
      const command = commandlist[i];
@@ -52,7 +52,7 @@ module.exports.run = async(bot, message, args) =>{
      }
    response += general;
    response += infomatie;
-  //  response += admin
+
 
    message.author.send(response).then(() => {
      message.channel.send("alle commands staan in je prive bericht :mailbox_with_mail:");
