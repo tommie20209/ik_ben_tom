@@ -31,7 +31,7 @@ client.on("guildMemberAdd", newMember => {
     var channel = newMember.guild.channels.cache.find(ch => ch.name == "『👋🏻』welkom");
     var joinembed = new discord.MessageEmbed()
     .setColor("GREEN")
-    .setThumbnail(newMember.author.DisplayAvatarURL());
+    .setThumbnail(newMember.author.AvatarURL());
     channel.send(joinembed);
     newMember.roles.add(role.id);
 });
