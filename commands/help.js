@@ -59,6 +59,7 @@ module.exports.run = async(bot, message, args) =>{
    }).catch(() => {
     return message.channel.send("je prive berichten staan uit! zet het aan!");   
    });
+   
 }
 }
 
