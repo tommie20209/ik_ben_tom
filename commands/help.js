@@ -28,7 +28,8 @@ module.exports.run = async(bot, message, args) =>{
     }
  
     commandlist.push(constructor)
-     
+  
+    
    });
 
 
