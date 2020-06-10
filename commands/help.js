@@ -55,9 +55,9 @@ module.exports.run = async(bot, message, args) =>{
   //  response += admin
 
    message.author.send(response).then(() => {
-     message.channel.send("alle commands staan in je prive bericht :mailbox_with_mail:");
+    return message.channel.send("alle commands staan in je prive bericht :mailbox_with_mail:");
    }).catch(() => {
-    message.channel.send("je prive berichten staan uit! zet het aan!");   
+    return message.channel.send("je prive berichten staan uit! zet het aan!");   
    });
 }
 }
