@@ -19,7 +19,7 @@ module.exports.run = async(bot, message, args) =>{
    var commandlist = [];
    var prefix = botConfig.prefix;
 
-   client.commands.forEach(command => {
+   bot.commands.forEach(command => {
 
     var constructor = {
       name: command.help.name,
@@ -27,37 +27,37 @@ module.exports.run = async(bot, message, args) =>{
       category: command.help.category
     }
  
-    commandlist.push(constructor)
-  
-    
+    commandlist.push(constructor);
+     
    });
 
 
    var response = "**toms bot**\n\n";
    var general = "**algemeen**\n";
-   var infomatie = "**_infomatie_**\n";
+   var infomatie = "\n**infomatie**\n";
+  //  var admin = "**\n_ADMIN COMMANds_**\n";
 
    for (let i = 0; i < commandlist.length; i++) {
      const command = commandlist[i];
      
      if(command["category"] == "algemeen"){
 
-      general +=`${prefix}${command["name"]} - ${command["description"]}\n`
+      general +=`${prefix}${command["name"]} - ${command["description"]}\n`;
 
 
      }else if(command["category"] == "infomatie"){
 
-      infomatie +=`${prefix}${command["name"]} - ${command["description"]}\n`
+      infomatie +=`${prefix}${command["name"]} - ${command["description"]}\n`;
 
      }
    response += general;
    response += infomatie;
-   
+  //  response += admin
 
    message.author.send(response).then(() => {
-    return  message.channel.send("alle commands staan in je prive bericht :mailbox_with_mail:");
+     message.channel.send("alle commands staan in je prive bericht :mailbox_with_mail:");
    }).catch(() => {
-   return message.channel.send("je prive berichten staan uit! zet het aan!");   
+    message.channel.send("je prive berichten staan uit! zet het aan!");   
    });
 }
 }
