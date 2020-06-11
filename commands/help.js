@@ -52,7 +52,7 @@ module.exports.run = async(bot, message, args) =>{
      }
    response += general;
    response += infomatie;
-  //  response += admin
+  //  response += admin 
 
    message.author.send(response).then(() => {
     return message.channel.send("alle commands staan in je prive bericht :mailbox_with_mail:");
