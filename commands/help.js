@@ -2,7 +2,7 @@ const discord = require("discord.js");
 const client = new discord.Client();
 const botConfig = require("../botconfig.json");
 module.exports.run = async(bot, message, args) =>{
-
+ 
 
    var commandlist = [];
    var prefix = botConfig.prefix;
