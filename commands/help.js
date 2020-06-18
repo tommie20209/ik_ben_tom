@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
 
     }
 
-    commandsList.push(item);
+    commandlist.push(item);
 
   });
 
