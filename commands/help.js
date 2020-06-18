@@ -23,8 +23,8 @@ var commandsList = [];
     var prefix = botConfig.prefix;
     var response = "";
 
-    
-    for (var i = 0; i < commandsList.length; i++) {
+
+    for (let i = 0; i < commandsList.length; i++) {
       const command = commandlist[i];  
       if(command["category"] == "algemeen"){
   
