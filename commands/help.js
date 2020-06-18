@@ -30,7 +30,7 @@ var commandsList = [];
 
     message.author.send(response).then(() => {
 
-        message.channel.send("Al de commando's staan in je privé berichten! mailbox_with_mail");
+        message.channel.send("Al de commando's staan in je privé berichten! :mailbox_with_mail:");
 
     }).catch(() => {
 
