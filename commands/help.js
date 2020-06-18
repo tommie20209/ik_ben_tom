@@ -19,6 +19,7 @@ var commandsList = [];
 
     // console.log(commandsList);
 
+    var commandlist;
     var prefix = botConfig.prefix;
     var response = "";
 
