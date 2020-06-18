@@ -19,12 +19,14 @@ module.exports.run = async (bot, message, args) => {
 
   var commandlist;
   var prefix = botConfig.prefix;
-  var response = "";
+  var response = "**toms bot**\n\n";
+  var general = "**algemeen**\n";
+  var infomatie = "\n**infomatie**\n";
 
 
   for (var i = 0; i < commandlist.length; i++) {
-    const command = commandlist[i];  
-    if(command["category"] == "algemeen"){
+    const command = commandlist[i];
+    if (command["category"] == "algemeen") {
       general += `${prefix}${command["name"]} - ${command["description"]}\n`;
 
 
@@ -35,7 +37,7 @@ module.exports.run = async (bot, message, args) => {
 
 
 
-    } 
+    }
   }
 
 
