@@ -17,6 +17,9 @@ module.exports.run = async (bot, message, args) => {
 
   });
 
+
+
+  
   var commandlist;
   var prefix = botConfig.prefix;
   var response = "**toms bot**\n\n";
