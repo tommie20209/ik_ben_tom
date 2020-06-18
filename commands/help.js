@@ -9,7 +9,7 @@ var commandsList = [];
 
             name: command.help.name,
             description: command.help.description,
-            // category: command.help.category
+            category: command.help.category
 
         }
 
