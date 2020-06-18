@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
   var response = "";
 
 
-  for (var i = 0; i < commandslist.length; i++) {
+  for (var i = 0; i < commandlist.length; i++) {
     const command = commandlist[i];  
     if(command["category"] == "algemeen"){
       general += `${prefix}${command["name"]} - ${command["description"]}\n`;
