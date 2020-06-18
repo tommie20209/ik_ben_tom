@@ -22,12 +22,21 @@ var commandsList = [];
     var prefix = botConfig.prefix;
     var response = "";
 
-    for (var i = 0; i < commandsList.length; i++) {
+    for (var i = 0; i < commandsList.length; i++) {  
+      if(command["category"] == "algemeen"){
+  
+       general +=`${prefix}${command["name"]} - ${command["description"]}\n`;
+  
+  
+      }else if(command["category"] == "infomatie"){
+  
+       infomatie +=`${prefix}${command["name"]} - ${command["description"]}\n`;
+  
 
-        response += `${prefix}${commandsList[i]["name"]} - ${commandsList[i]["description"]} \r\n`;
+        
 
     }
-
+  }
     message.author.send(response).then(() => {
 
         message.channel.send("Al de commando's staan in je privé berichten! :mailbox_with_mail:");
