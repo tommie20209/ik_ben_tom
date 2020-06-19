@@ -28,6 +28,9 @@ module.exports.run = async (bot, message, args) => {
   var admin = "**\n_ADMIN COMMANds_**\n";
 
 
+
+  
+
   for (var i = 0; i < commandlist.length; i++) {
     const command = commandlist[i];
     if (command["category"] == "algemeen") {
