@@ -19,12 +19,13 @@ module.exports.run = async (bot, message, args) => {
 
 
 
-  
+
   var commandlist;
   var prefix = botConfig.prefix;
   var response = "**toms bot**\n\n";
   var general = "**algemeen**\n";
   var infomatie = "\n**infomatie**\n";
+  var admin = "**\n_ADMIN COMMANds_**\n";
 
 
   for (var i = 0; i < commandlist.length; i++) {
@@ -36,17 +37,16 @@ module.exports.run = async (bot, message, args) => {
     } else if (command["category"] == "infomatie") {
 
       infomatie += `${prefix}${command["name"]} - ${command["description"]}\n`;
-
-
-
+    }else (command["category"] == "_ADMIN COMMANds_"); {
+      admin += `${prefix}${command["name"]} - ${command["description"]}\n`;
 
     }
-  }
+  };
 
 
   response += general;
   response += infomatie;
-
+  response += admin
   message.author.send(response).then(() => {
 
     message.channel.send("Al de commando's staan in je privé berichten! :mailbox_with_mail:");
