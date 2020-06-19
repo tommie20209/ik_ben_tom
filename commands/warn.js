@@ -51,5 +51,5 @@ module.exports.run = async(bot, message, args) =>{
 module.exports.help ={
   name: "warn",
   description: "waarschuw iemand",
-  category: "algemeen"
+  category: "_ADMIN COMMANds_"
 }

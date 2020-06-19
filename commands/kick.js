@@ -84,5 +84,5 @@ module.exports.run = async(bot, message, args) =>{
 module.exports.help ={
   name: "kick",
   description: "kick een speler",
-  category: "algemeen"
+  category: "_ADMIN COMMANds_"
 }
