@@ -49,7 +49,7 @@ module.exports.run = async (bot, message, args) => {
 
   response += general;
   response += infomatie;
-  response += admin
+  response += admin;
   message.author.send(response).then(() => {
 
     message.channel.send("Al de commando's staan in je privé berichten! :mailbox_with_mail:");
