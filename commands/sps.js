@@ -26,6 +26,38 @@ module.exports.run = async (bot, message, args) => {
 
         }
     }
+    else if(args[0].toUpperCase() == "PAPIER"){
+
+        if(result == "papier"){
+
+            return message.channel.send(`ik heb ${result} :notepad_spiral:, het is gelijkspel`);
+
+        }else if(result == "schaar"){
+
+            return message.channel.send(`ik heb ${result} :scissors:, ik wint`);
+
+        }else if(result == "steen"){
+
+            return message.channel.send(`ik heb ${result} :moyai:, jij wint`);
+
+        }
+    }
+    else if(args[0].toUpperCase() == "schaar"){
+
+        if(result == "papier"){
+
+            return message.channel.send(`ik heb ${result} :notepad_spiral:, jij wint`);
+
+        }else if(result == "schaar"){
+
+            return message.channel.send(`ik heb ${result} :scissors:, het is gelijkspel`);
+
+        }else if(result == "steen"){
+
+            return message.channel.send(`ik heb ${result} :moyai:, ik win`);
+
+        }
+    }
 
 }
 
