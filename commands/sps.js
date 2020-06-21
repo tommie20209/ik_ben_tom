@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 
     var options = ["steen", "papier", "schaar"];
 
-    var result = options[Math.floor(math.random() * options.length)];
+    var result = options[Math.floor(Math.random() * options.length)];
 
     if(args[0].toUpperCase() == "STEEN"){
 
