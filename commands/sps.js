@@ -42,7 +42,7 @@ module.exports.run = async (bot, message, args) => {
 
         }
     }
-    else if(args[0].toUpperCase() == "schaar"){
+    else if(args[0].toUpperCase() == "SCHAAR"){
 
         if(result == "papier"){
 
