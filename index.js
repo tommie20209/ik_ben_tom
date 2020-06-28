@@ -1,5 +1,5 @@
 const discord = require("discord.js");
-const botConfig = require("./ik_ben_tom/botConfig.json");
+const botConfig = require("./leuki/ik_ben_tom/botConfig");
 const fs = require("fs");
 
 const client = new discord.Client();
