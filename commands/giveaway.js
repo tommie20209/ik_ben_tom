@@ -42,8 +42,8 @@ module.exports.run = async (bot, message, args) => {
 
     for (let i = 0; i < peopleReacted.length; i++) {
 
-      if (peopleReacted[1].id == client.user.id) {
-        peopleReacted.splice(i);
+      if (peopleReacted[].id == client.user.id) {
+        peopleReacted.splice(i, 1);
         continue;
       }
 
