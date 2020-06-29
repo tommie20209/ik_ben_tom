@@ -43,5 +43,4 @@ module.exports.run = async (bot, message, args) => {
         `The winner of the giveaway for **${prize}** is... ${winner}`
       );
     }, ms(args[0]));
-  },
-};
+  };
