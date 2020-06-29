@@ -66,7 +66,7 @@ module.exports.run = async (bot, message, args) => {
 
         if (winnars[o] == peopleReacted[random]) {
           inList = true;
-          y--;
+          y++;
           break;
         }
 
