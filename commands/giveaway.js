@@ -34,7 +34,9 @@ module.exports.run = async (bot, message, args) => {
         return message.channel.send(
           `Not enough people reacted for me to start draw a winner!`
         );
-      }
+      }`
+      
+      `
 
       let winner = m.reactions.cache
         .get("🎉")
