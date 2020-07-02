@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
 
 
 
-    message.delete();
+    //message.delete();
 
     const embed = new discord.MessageEmbed()
     .setTitle(`${message.author.username} heeft een rieview geschreven.`)
