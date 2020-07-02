@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
 
     var channel = message.member.guild.channels.cache.find(channel => channel.name === "rieviews");
 
-    if (!channel) return message.channel.send(`${channel} niet gevonden`);
+    if (!channel) return message.channel.send("Kanaal niet gevonden");
 
     var stars = "";
     for (let i = 0; i < amountStars.length; i++) {
