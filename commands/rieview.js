@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
 
     var text = args.splice(1, args.lenght).join(" ") || `**geen tekst opgegeven**`;
 
-    var channel = message.member.guild.channels.cache.find(channel => channel.name === "rieviews");
+    var channel = message.member.guild.channels.cache.find(channel => channel.name === "reviews");
 
     if (!channel) return message.channel.send("Kanaal niet gevonden");
 
