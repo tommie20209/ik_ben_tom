@@ -15,14 +15,13 @@ module.exports.run = async (bot, message, args) => {
     if (!channel) return message.channel.send("Kanaal niet gevonden");
 
     var stars = "";
-    for (let i = 0; i < amountStars.length; i++) {
+    for (let i = 0; i < amountStars; i++) {
 
         stars += ":star: ";
-
     }
 
 
-    
+
     message.delete();
 
     const embed = new discord.MessageEmbed()
