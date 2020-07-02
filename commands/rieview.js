@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
     .setTitle(`${message.author.username} heeft een rieview geschreven.`)
     .setColor("RED")
     .addField("sterren: ", stars)
-    addField("Rieview: ", text);
+    .addField("Rieview: ", text);
 
     message.channel.send("✅ je rieview is succesvol geschreven");
 
