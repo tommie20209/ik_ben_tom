@@ -37,7 +37,7 @@ module.exports.run = async (bot, message, args) => {
     .setTitle("🎉 **GIVEAWAY** 🎉")
     .setFooter(`Vervalt: ${dateTime}`)
     .setDescription(item)
-    .addField("test", `reageer met 🎉 op mee te doen!`)
+    .addField("reageer", `reageer met 🎉 op mee te doen!`)
 
   // Verzend embed en zet de reactie op de popper.
   var embedSend = await message.channel.send(giveawayEmbed);
@@ -102,7 +102,7 @@ module.exports.run = async (bot, message, args) => {
 
     // Voor iedere winnaar gaan we een bericht sturen.
     for (var i = 0; i < winners.length; i++) {
-      message.channel.send("Gefeliciteerd " + winners[i] + `! Je hebt  **${item}** gewonnen! Maak een ticket aan binnen 24 uur om je cadeau te claimen!`);
+      message.channel.send(`Gefeliciteerd: ${winners[y]} je hebt ${item} gewonnen in deze giveaway! gewonnen! Maak een ticket aan binnen 24 uur om je cadeau te claimen!`);
     }
 
   }, 1000 * time);
