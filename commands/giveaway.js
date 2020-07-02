@@ -52,7 +52,7 @@ module.exports.run = async (bot, message, args) => {
     var inList = false;
 
     // Verkrijg de gebruikers die gereageerd hebben op de giveaway.
-    var peopleReacted = embedSend.reactions.get("🎉").users.array();
+    var peopleReacted = embedSend.reactions.cache.get("🎉").users.cache.array();
 
     // Hier gaan we al de mensen over gaan en kijken als de bot er tussen staan
     // De bot moeten we uit de lijst weghalen en dan gaan we verder.
