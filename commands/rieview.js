@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     var stars = "";
     for (let i = 0; i < amountStars.length; i++) {
 
-        stars += ":star:";
+        stars += ":star: ";
 
     }
 
