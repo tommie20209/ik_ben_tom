@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
   item = args.splice(2, args.length).join(' ');
 
 
-  if (!winaarcount) return message.reply("geen aantal spelers opgeven");
+  if (!winnerCount) return message.reply("geen aantal spelers opgeven");
   if (!time) return message.reply("geen tijd opgeven");
   if (!item) return message.reply("geen winnaars item opgeven");
 
