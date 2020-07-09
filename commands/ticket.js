@@ -47,6 +47,14 @@ module.exports.run = async (bot, message, args) => {
                         CONNECT: true,
                         ADD_REACTIONS: true
                     });
+                    setedparent.updateOverwrite(message.guild.roles.cache.find(r => r.name == "ticket support|ticket helpen"),{
+                        CREATE_INSTANT_INVITE: false,
+                        READ_MESSAGES: true,
+                        SEND_MESSAGES: true,
+                        ATTACH_FILES: true,
+                        CONNECT: true,
+                        ADD_REACTIONS: true   
+                    });
 
                     var embedtt = new discord.MessageEmbed()
                         .setTitle(`hoi ${message.author.username}`);
