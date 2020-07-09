@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
     if (ticketBestaat) return;
 
     var embed = new discord.MessageEmbed()
-        .setTitle("hoi" + message.author.username)
+        .setTitle("ticket" + message.author.username)
         .setFooter("ticket wordt gemaakt");
 
     message.channel.send(embed);
