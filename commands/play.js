@@ -28,6 +28,7 @@ module.exports.run = async (bot, message, args) => {
   message.channel.send(`nu aan het spelen ${info.title}`);
 
 
+  
 }
 
 module.exports.help = {
