@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 
   if (!args[0]) return message.reply("geef een url mee van youtube");
 
-  var validate = await ytdl.validateIURL(args[0]);
+  var validate = await ytdl.validateURL(args[0]);
   if (!validate) return message.channel.send("geef een **juiste** url mee");
 
   var info = await ytdl.getInfo(args[0]);
