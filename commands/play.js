@@ -2,7 +2,7 @@ const discord = require("discord.js");
 const ytdl = require("ytdl-core");
 module.exports.run = async (bot, message, args) => {
 
-  if (!message.member.voice.channel) return message.reply("connecteer met een spaak kannaal");
+  if (!message.member.voice.channel) return message.reply("conecteer met een spaak kannaal");
 
   if (message.guild.me.voice.channel) return message.channel.send("de bot is al verbonden spaak kannaal");
 
