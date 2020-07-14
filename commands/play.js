@@ -1,5 +1,5 @@
 const discord = require("discord.js");
-const ytdhl = require("ytdhl-core");
+const ytdl = require("ytdl-core");
 module.exports.run = async (bot, message, args) => {
 
   if (!message.member.voice.channel) return message.reply("connecteer met een spaak kannaal");
