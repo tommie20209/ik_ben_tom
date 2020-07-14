@@ -8,10 +8,10 @@ module.exports.run = async (bot, message, args) => {
 
   if (!args[0]) return message.reply("geef een url mee van youtube");
 
-  var validate = await ytdhl.validateIURL(args[0]);
+  var validate = await ytdl.validateIURL(args[0]);
   if (!validate) return message.channel.send("geef een **juiste** url mee");
 
-  var info = await ytdhl.getInfo(args[0]);
+  var info = await ytdl.getInfo(args[0]);
 
   var options = { seek: 3, volume: 1 };
 
@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
     .then(voiceChannel => {
 
 
-      var stream = ytdhl(args[0], { filtr: `audioonly` });
+      var stream = ytdl(args[0], { filtr: `audioonly` });
       var dispatcher = voiceChannel.play(stream, options);
 
 
